@@ -12,12 +12,6 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Fallback for background images until loaded */
-        .hero {
-            background-color: #330000;
-        }
-    </style>
 </head>
 
 <body>
@@ -28,55 +22,78 @@
             <img src="assets/chenda_icon.png" alt="Chenda Icon" class="logo-icon">
             Komban
         </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#media">Gallery</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#media">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <!-- Particle Container -->
+        <!-- Animated Background -->
+        <div class="hero-bg-animated"></div>
+
         <div class="hero-content">
+            <!-- <h1 class="animate-up">Komban Chenda Melam</h1> -->
             <h1 class="animate-up">Komban Chenda Melam</h1>
-            <p class="animate-up delay-1">Kerala's Rhythm, Resonating Worldwide</p>
+            <p class="animate-up delay-1">Brining Celebrations to Life</p>
             <div class="cta-buttons animate-up delay-2">
-                <a href="tel:+919092792792" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Book Now</a>
+                <a href="tel:+919092792792" class="btn btn-primary"><i class="fas fa-phone"></i> Book Now</a>
                 <a href="#media" class="btn btn-secondary">Watch Video</a>
             </div>
         </div>
     </header>
 
-    <!-- Poster Section Removed -->
-
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Our Tradition</h2>
                 <div class="line"></div>
             </div>
             <div class="about-grid">
-                <div class="about-text">
+                <div class="about-text reveal">
                     <p>Experience the thunderous beats and divine rhythm of Kerala's traditional Chenda Melam. We,
                         <strong>Komban Chenda Melam</strong>, bring the majestic percussion art form to your special
                         occasions.
                     </p>
-                    <p>Specializing in <strong>Shingari Melam, Pancharimelam, and Thayambaka</strong>, our team of
-                        expert percussionists makes every event unforgettable.</p>
+                    <p>Specializing in <strong>Shingari Melam, Pancharimelam, and Thayambaka</strong>, our highly
+                        experienced artists perform in full traditional attire, creating an electrifying and
+                        unforgettable atmosphere.</p>
+                    <p><strong>✅ Affordable | ✅ Professional | ✅ Available PAN India</strong><br>
+                        Starting from just <strong>₹6000</strong>, book us anywhere Tamil Nadu or across
+                        India</p>
                     <ul class="services-list">
-                        <li><i class="fas fa-om"></i> Temple Festivals</li>
-                        <li><i class="fas fa-ring"></i> Weddings & Receptions</li>
-                        <li><i class="fas fa-store"></i> Shop Inaugurations</li>
-                        <li><i class="fas fa-music"></i> Cultural Events</li>
+                        <li class="reveal">
+                            <i class="fas fa-om"></i>
+                            <span>Temple Festivals</span>
+                        </li>
+                        <li class="reveal">
+                            <i class="fas fa-ring"></i>
+                            <span>Weddings & Receptions</span>
+                        </li>
+                        <li class="reveal">
+                            <i class="fas fa-store"></i>
+                            <span>Shop Inaugurations & Corporate Events</span>
+                        </li>
+                        <li class="reveal">
+                            <i class="fas fa-music"></i>
+                            <span>Cultural Programs</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="about-image">
+                <div class="about-image reveal">
                     <img src="assets/artistic_drum.png" alt="Chenda Drum Detail">
                 </div>
             </div>
@@ -86,31 +103,38 @@
     <!-- Media Section -->
     <section id="media" class="media">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Gallery & Media</h2>
                 <div class="line"></div>
             </div>
             <div class="media-grid">
-                <!-- Video Embedding -->
+                <!-- Video Embedding https://www.youtube.com/watch?v=2wupWGQZTc4 -->
                 <div class="video-wrapper">
-                    <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdm2Z-K9lWULrVjW38y"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2wupWGQZTc4"
+                        title="Chenda Melam Performance" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-                <!-- Images Carousel or Grid -->
-                <div class="image-gallery">
-                    <img src="assets/festival_crowd.png" alt="Festival Crowd">
-                    <img src="assets/hero_bg.png" alt="Chenda Performance">
+                <!-- Images Gallery -->
+                <div class="gallery-container">
+                    <button class="gallery-nav prev" aria-label="Previous Image"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="image-gallery">
+                        <img src="assets/festival_crowd.png" alt="Festival Crowd" class="reveal gallery-img">
+                        <img src="assets/hero_bg.png" alt="Chenda Performance" class="reveal gallery-img">
+                        <img src="assets/artistic_drum.png" alt="Traditional Chenda Drum" class="reveal gallery-img">
+                        <!-- Duplicate images for scrolling demonstration if needed, or rely on these 3 -->
+                    </div>
+                    <button class="gallery-nav next" aria-label="Next Image"><i
+                            class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-            <div class="social-links-bar">
+            <div class="social-links-bar reveal">
                 <a href="https://www.youtube.com/@chendamelamplayer" target="_blank" class="social-btn youtube"><i
                         class="fab fa-youtube"></i> Subscribe on YouTube</a>
                 <a href="https://www.instagram.com/komban_kerala_chendamelam?igsh=MWtwOW13eG5rOXB1Yw==" target="_blank"
                     class="social-btn instagram"><i class="fab fa-instagram"></i> Follow on Instagram</a>
-                <a href="https://facebook.com/share/15LT9v9LDc" target="_blank" class="social-btn facebook"><i
+                <a href="https://www.facebook.com/kumaran.kn.7" target="_blank" class="social-btn facebook"><i
                         class="fab fa-facebook-f"></i> Like us on Facebook</a>
             </div>
         </div>
@@ -119,7 +143,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-box">
+            <div class="contact-box reveal">
                 <h2>Contact Us</h2>
                 <p>For bookings and inquiries</p>
 
@@ -145,6 +169,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="Gallery Image" id="lightboxImg">
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Komban Chenda Melam. All Rights Reserved.</p>
